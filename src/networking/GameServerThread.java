@@ -19,7 +19,12 @@ public class GameServerThread extends Thread {
     int round = 0;
     int maxRounds;
 
-
+    /**
+     * Sets a set of objects for each player.
+     * @param gameProtocol game protocol
+     * @param playerSocket player socket
+     * @param player player
+     */
     public GameServerThread(GameProtocol gameProtocol, Socket playerSocket, Player player) {
         super(player.getName() + " - game thread");
         this.gameProtocol = gameProtocol;

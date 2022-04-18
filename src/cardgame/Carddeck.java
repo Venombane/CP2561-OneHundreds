@@ -24,7 +24,7 @@ public class Carddeck {
 
     /**
      * Deal a deck to a list of players
-     * @param playersList
+     * @param playersList player list
      */
     public void deal(List<Player> playersList){
         while(this.cardList.size() >= playersList.size()){
@@ -49,7 +49,7 @@ public class Carddeck {
 
     /**
      * Print the deck to a printStream
-     * @param printStream
+     * @param printStream print stream
      */
     public void print(PrintStream printStream){
         cardList.forEach((c)-> printStream.print(c.toString() + " "));
@@ -57,7 +57,7 @@ public class Carddeck {
 
     /**
      * Get the number of cards remaining
-     * @return
+     * @return card list size
      */
     public int cardsRemaining(){
         return this.cardList.size();

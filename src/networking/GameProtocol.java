@@ -50,8 +50,8 @@ public class GameProtocol {
     }
 
     /**
-     *
-     * @param gameStatus
+     * Sets the games status
+     * @param gameStatus gameStatus
      */
     public void setGameStatus(Status gameStatus) {
         this.gameStatus = gameStatus;
@@ -88,6 +88,10 @@ public class GameProtocol {
         return winnerString;
     }
 
+    /**
+     * Method to determine the overall winner of the game and return string with their name.
+     * @return String with overall winner
+     */
     public String overallWinner() {
         int scoreIndex = 0;
         for (int i = 1; i < playerList.size(); i++) {

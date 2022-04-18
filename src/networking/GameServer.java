@@ -16,12 +16,11 @@ import java.util.LinkedList;
  */
 public class GameServer {
 
-    //TODO test this with 3 players
-    public static final int NUMBER_PLAYERS = 2;
+    public static final int NUMBER_PLAYERS = 3;
 
     /**
      * Main server loop
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
 
@@ -45,12 +44,12 @@ public class GameServer {
         System.out.printf("Connections: %d\n", clientSocketList.size());
 
         //Start the game
-        LinkedList<Player> playerList = new LinkedList<Player>();
-        playerList.add(new Player("Player 1"));
-        playerList.add(new Player("Player 2"));
 
-        //TODO you need to give it the players information
-        //TODO consider creating the players based on the connections above and adding them to the game protocol
+        LinkedList<Player> playerList = new LinkedList<Player>();
+        for (int i = 1; i <= NUMBER_PLAYERS; i++) {
+            playerList.add(new Player("Player " + i));
+        }
+
         Carddeck cardDeck = new Carddeck();
         cardDeck.shuffle();
         GameProtocol gameProtocol = new GameProtocol(cardDeck, playerList);

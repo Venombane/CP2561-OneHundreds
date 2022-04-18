@@ -15,7 +15,7 @@ public class Player implements Serializable {
 
     /**
      * Create the Player with a name
-     * @param name
+     * @param name name
      */
     public Player(String name) {
         this.name = name;
@@ -45,7 +45,7 @@ public class Player implements Serializable {
 
     /**
      * Get the players hand
-     * @return
+     * @return players hand
      */
     public LinkedList<Card> getHand() {
         return hand;
@@ -60,7 +60,7 @@ public class Player implements Serializable {
 
     /**
      * Add a card to a hand
-     * @param card
+     * @param card card object
      */
     public void addCard(Card card){
         this.hand.add(card);
@@ -76,7 +76,7 @@ public class Player implements Serializable {
 
     /**
      * Set the players hand
-     * @param hand
+     * @param hand hand list
      */
     public void setHand(LinkedList<Card> hand) {
         this.hand = hand;
@@ -84,7 +84,7 @@ public class Player implements Serializable {
 
     /**
      * Print the players hand to a printStream
-     * @param printStream
+     * @param printStream print stream
      */
     public void printHand(PrintStream printStream){
         this.hand.forEach((c)->printStream.print(c.toString() + " "));
